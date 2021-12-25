@@ -1,32 +1,17 @@
 <mat-nav-list>
-    <div class="profile-card">
-        <div class="header">
-            <h2>Soufiane FADIL</h2>
-            <h4>example@email.com</h4>
-        </div>
-        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
-    </div>
-
-    <mat-divider></mat-divider>
-
-    <h2 matSubheader>Pages</h2>
-
-    <a mat-list-item [skipLocationChange]="true" routerLinkActive="list-item-active" routerLink="/home">Home</a>
-    <a mat-list-item [skipLocationChange]="true" routerLinkActive="list-item-active" routerLink="/roomcontrol">Room Control</a>
-    <a mat-list-item [skipLocationChange]="true" routerLinkActive="list-item-active" routerLink="/television">Television</a>
-
-    <mat-divider></mat-divider>
-
-    <h2 matSubheader>Tools</h2>
-
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
-        <mat-icon>import_contacts</mat-icon>
-        Contacts
-    </a>
-
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
-        <mat-icon>contact_phone</mat-icon>
-        Leads
-    </a>
-
+    <a mat-list-item [skipLocationChange]="true" routerLinkActive="list-item-active" routerLink="/home"><mat-icon>home</mat-icon>{{'MENU.HOME' | translate}}</a>
+    <a mat-list-item [skipLocationChange]="true" routerLinkActive="list-item-active" routerLink="/roomcontrol"><mat-icon>event_seat</mat-icon>{{'MENU.ROOMCONTROL' | translate}}</a>
+    <a mat-list-item [skipLocationChange]="true" routerLinkActive="list-item-active" routerLink="/television"><mat-icon>tv</mat-icon>{{'MENU.TELEVISION' | translate}}</a>
+    <mat-divider></mat-divider> 
 </mat-nav-list>
+    
+
+    
+<mat-action-list>
+    <h2 matSubheader>Language</h2>
+    <button mat-list-item (click)="onLanguageChange('en-us')"> English </button>
+    <button mat-list-item (click)="onLanguageChange('zh-tw')"> 繁體中文 </button>
+    <button mat-list-item (click)="onLanguageChange('zh-cn')"> 简体中文 </button>
+</mat-action-list>
+    
+

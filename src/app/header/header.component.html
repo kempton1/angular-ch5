@@ -4,7 +4,7 @@
             <mat-icon>menu</mat-icon>
         </button>
 
-        <span> APP LOGO </span>
+        <span> {{'HEADER.TITLE' | translate}} </span>
 
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
@@ -17,18 +17,6 @@
                     <button mat-icon-button>
                         <mat-icon>help_outline</mat-icon>
                     </button>
-                </li>
-                <li>
-                    <button mat-button [matMenuTriggerFor]="menu">
-                        <mat-icon>person_outline</mat-icon>
-                    </button>
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item>
-                            <mat-icon>exit_to_app</mat-icon>
-                            Sign out
-                        </button>
-                    </mat-menu>
-
                 </li>
             </ul>
         </div>

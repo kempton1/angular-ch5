@@ -12,6 +12,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule} from '@angular/material/list';
 import { FlexLayoutModule} from '@angular/flex-layout';
 
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+//import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +26,12 @@ import { HomeComponent } from './home/home.component';
 import { RoomcontrolComponent } from './roomcontrol/roomcontrol.component';
 import { TelevisionComponent } from './television/television.component';
 
+// AoT requires an exported function for factories
+/*
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +53,15 @@ import { TelevisionComponent } from './television/television.component';
     MatDividerModule,
     MatMenuModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+ /*       loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }*/
+    })
   ],
   providers: [{provide: APP_BASE_HREF, useValue: './'}],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
