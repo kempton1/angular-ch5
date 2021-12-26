@@ -25,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RoomcontrolComponent } from './roomcontrol/roomcontrol.component';
 import { TelevisionComponent } from './television/television.component';
+import { DigitalClockComponent } from './digital-clock/digital-clock.component';
 
 // AoT requires an exported function for factories
 /*
@@ -40,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     HomeComponent,
     RoomcontrolComponent,
-    TelevisionComponent
+    TelevisionComponent,
+    DigitalClockComponent
   ],
   imports: [
     BrowserModule,
